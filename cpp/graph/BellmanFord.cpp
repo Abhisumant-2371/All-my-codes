@@ -11,6 +11,10 @@
 // worst path length from source to destination will always contain n-1 edges or n vertices with no cycle becoz positive cycle will unnecessarily increase the path length and the negative cycle will trap us in the infinite code.
 
 // FOR BOTH BELLMAN FORD AND DETECTING THE NEGATIVE CYCLE IN THE GRAPH
+// Steps for applying the Bellmann ford 
+// 1.initialize all the vertex distance to infinite and give src distance as 0
+// 2.Relax all the edges e-1 times 
+// 3.for checking that it contain negative cycle or not extra loop is req. i.e you need to relax e times if nothing happens in the last step then it means no negative cycle
 #include <bits/stdc++.h>
 using namespace std;
 void bellman_ford(int v, vector<vector<int>> edges)

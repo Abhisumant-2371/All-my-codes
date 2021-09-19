@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Grid</title>
+    <style>
+        .container
+        {
+            display: grid;
+            /* grid-template-columns: repeat(3,1fr) 2fr; */
+            /* another way of assing it is  */
+            grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+            /* auto fill will ensure that with 200px width how many box can come in single row  */
+            grid-gap: 20px;
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            /* right now the sizd of the box isn't fixed as we keep on increasing the text in the box the size of the box will start increasing  */
+
+            /* for fixing the size at max we use  */
+            /* now for fixing the max height  */
+            /* grid-auto-rows: 20vh; */
+            /* for fixing the maximum width  */
+            /* grid-auto-columns: 20vw; */
+            /* for fixing min and max height of the column and row same time we use  */
+            grid-auto-rows: minmax(100px,auto);
+            grid-auto-columns: minmax(50px,auto);
+            column-gap:20px;
+
+        }
+        .items{
+            background-color: lightcoral;
+            border:3px solid green;
+            border-radius: 3px;
+        }
+
+        #item2{
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items" id="item1">dibba 1</div>
+        <div class="items" id="item2">dibba 2</div>
+        <div class="items">dibba 3</div>
+        <div class="items">dibba 4</div>
+        <div class="items">dibba 5</div>
+    </div>
+</body>
+</html>

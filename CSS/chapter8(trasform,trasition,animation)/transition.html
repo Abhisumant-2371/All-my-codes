@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        .container{
+            background-color: red;
+            height: 50vh;
+            transition: background-color 1s ease-in-out 1s;
+        }
+        .container:hover{
+            background-color: yellow;
+        }
+        .box{
+            border: 2px solid black;
+
+            height: 20vh;
+            transition-property: width height;
+            transition-duration: 2s;
+            transition-timing-function: ease-in-out;
+
+        }
+        .box:hover{
+            width: 30vw;
+            height: 50vh;
+        }
+        /* div.box:hover{
+            width: 50vw;
+            
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus similique, voluptatum iure architecto quis ut, nam reprehenderit sunt harum rem autem deleniti eveniet ea repellat suscipit cupiditate, ducimus provident accusantium.</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est animi, provident enim fugiat tempora quae commodi cupiditate possimus similique consequatur inventore velit atque sint qui tempore suscipit accusantium repudiandae non.</div>
+    </div>
+</body>
+</html>

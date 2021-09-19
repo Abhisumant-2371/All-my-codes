@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FLEXBOX</title>
+    <style>
+        .container{
+            display: flex;
+            /* just after making the flex container default value of flex direction i.e. row is assigned to the elements in the box  */
+            flex-direction:row;
+            /* flex-wrap: wrap; */
+            justify-content: center;
+            background-color: aqua;
+            height: 50vh;
+            align-items:center;
+            /* align-content: center; */
+            /* from align content there will be no space between the boxes while wrapping  */
+        }
+
+        /* -------------------------------------
+         */
+         /* order is the property of the element in the flexbox */
+         /* default order is 0 of every element  */
+         /* more order will be at right of the line  */
+
+         /* align self is used to align a particular box  */
+         /* flex-grow and flex shrink */
+        .box1 {
+            order:1;
+            width: 133px;
+            height: 133px;
+            /* overflow-x: scroll; */
+            background-color: red;
+            border: 2px solid black;
+            /* flex-grow: 1; */
+        }
+
+        .box2 {
+            width: 133px;
+            height: 133px;
+            
+            /* overflow-x: scroll; */
+            background-color: yellow;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">BOX1</div>
+        <div class="box2">BOX2</div>
+        <div class="box2">BOX3</div>
+        <div class="box2">BOX4</div>
+
+    </div>
+</body>
+
+</html>

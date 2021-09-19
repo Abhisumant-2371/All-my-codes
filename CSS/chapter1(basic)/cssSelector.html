@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CssSelector</title>
+    <style>
+        /* CSS Selector is used to change the style of entire page  */
+        body{
+            background-color: blueviolet;
+        }
+        *{
+            margin: 10;
+            padding:0cm ;
+
+        }
+        /* Element selector is used to  style a particular element  */
+        
+        /* Priority of the overlapping command and style is that 
+        1.inline 
+        2.link 
+        3.style tag(but only if link command is preceded by style ) */
+        h1{
+            color: red;
+            background-color: yellow; 
+            border: 2px solid black;  
+        }
+        #unique{
+            color: blue;
+            border: 2px solid black;
+        }
+        /* multiple elements can also be done or style by using comma in between them */
+        /* for coloring all paragraphs of class red can also be done by p.red */
+        /* Same applies for the p#red means the paragraph with id red  */
+        /* '* is a universal selector for selecting all the elements used  */
+    </style>
+</head>
+<body>
+    <div>
+        <h1>This is my CSS selector page</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat eveniet labore accusantium nesciunt voluptatum laborum quidem autem cum corrupti optio omnis consectetur laboriosam magni reprehenderit corporis blanditiis qui, ut dolorem debitis esse quam distinctio!
+        </p>
+    </div>
+    <div>
+        <h1 id="unique">This is my second blog</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores eaque ea, deleniti laudantium unde corrupti porro magni ducimus soluta voluptates facere temporibus mollitia?</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+    <style>
+        *{
+            margin: 0;
+            /* 4 values of margin will be clockwise */
+            padding: 0;
+        }
+        .content{ 
+            height: 323px;
+            /* height of an element =given height+top/bottom padding+top/bottom margin+border  */
+            width: 345px;;
+            margin:2px 3px 6px 3px;
+            background-color: red;
+            border-width: 4px;
+            border-style:solid;
+            border-color: black;
+            /* or  */
+            /* border: 3px inset blue; */
+            /* simple shorthand */
+            border-radius: 10px;
+            /* curver at the edges of the border  */
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis fugiat necessitatibus consequatur amet, quibusdam ut. Amet voluptates magni fuga exercitationem, accusantium nisi architecto tempora incidunt mollitia, dignissimos voluptatum? Magni itaque error distinctio dolorem! 
+    </div>
+</body> 
+</html>

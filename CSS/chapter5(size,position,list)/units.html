@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>units</title>
+    <style>
+        .container{
+            font-size: 10px;
+        }
+        .box{
+            /* font-size: 3rem; */
+            /* here 3em =30px */
+            /* rem is relative to the html root element font size  */
+            /* The em unit is used for the relative length font size of the element  */
+            background-color: red;
+        }
+        .box2{
+            background-color: aqua;
+            width: 50vw;
+            height: 50vh;
+            /* the % unit is relative to parent element */
+            /* but we don't know that which device user is using so we give the unit as vw or vh means that 50 vw =50 % of the viewing device width  */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">This is my paragraph
+        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab vel atque omnis illo animi tempore voluptates excepturi, delectus distinctio necessitatibus. Autem quod culpa pariatur obcaecati nulla dolores, laboriosam perferendis minima alias ducimus libero tenetur?</div>
+    </div>
+    <div class="box2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut repellendus fugiat maiores quidem atque, placeat numquam odit culpa eveniet voluptatibus praesentium nihil pariatur excepturi, impedit reprehenderit, repudiandae blanditiis perferendis facilis! Odit, inventore consequuntur.</div>
+</body>
+</html>

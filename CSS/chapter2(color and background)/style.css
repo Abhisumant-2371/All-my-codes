@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 17px;
+}
+
+.red{
+    color:rebeccapurple;
+    background:yellow;
+}
+.green{
+    color: aqua;
+    background-color: green;
+    height: 200px;
+}

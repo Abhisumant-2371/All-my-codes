@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* background-color: orange; */
+
+        }
+
+        header {
+            background-color: black;
+            height: 70px;
+            position: sticky;
+            top: 0%;
+            z-index: 2;
+        }
+
+        li {
+            /* display: inline; */
+            color: white;
+            text-transform: capitalize;
+            list-style: circle;
+            background-color:grey;
+
+
+        }
+
+        .fruits {
+            color: black;
+            /* list-style: circle inside url(Location_dot_black.svg.png) no-repeat; */
+            /* list style shorthand can be used as: */
+            /* list-style: shape inside url(); */
+       }
+
+
+        .container {
+            background-color: aqua;
+            margin: auto;
+            position: relative;
+            width: 50vw;
+            height: 50vh;
+            z-index: 1;
+        }
+
+        .box {
+            background-color: yellow;
+            height: 200px;
+            width: 200px;
+            position: absolute;
+
+            right: 0%;
+        }
+
+        .box2 {
+            background-color: blue;
+            height: 200px;
+            width: 200px;
+            /* position: fixed; */
+
+
+        }
+    </style>
+</head>
+
+<!-- 
+There are different types of position of an elemetnt 
+following are the possible values:=
+
+1.static : The default position :top/bottom/left/right/z-index has no effect .It just 
+put the element into its normal position in the document flow
+
+2.relative: The top /bottom /left/right/z-index will now work.Otherwise the element is in the flow of document like static.
+
+3.absolute: The element is removed from the flow & is relatively positioned to its first non-static ancestor top /bottom etc works
+basically for all the other element respect it will be such that it not exist and its position will be distributed among all
+
+5.fixed:Just like absolute except the elemtent is positioned relative to the browser window.
+means that if we scroll the window it will not gonna effect it will remain in its own position
+
+6.sticky:The element is positioned based on the user scroll position -->
+
+<!-- TOP BOTTOM LEFT RIGHT  -->
+<!-- z-index will make sure that which element will be above the other -->
+<!-- More z index will be the priority -->
+<!-- ARE THE PROPERTIES WHICH MOVE THE BLOCK OF AN ELEMENT IN THE PARTICULAR DIRECTION -->
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>home</li>
+                <li>about</li>
+                <li>contact</li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <p style="border: 2px solid red;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, earum enim
+            voluptatum illum rem dicta
+            veniam. Quaerat eum recusandae nesciunt autem, alias nulla sed sequi est ipsam sapiente delectus soluta
+            facere exercitationem iste magni.
+        </p>
+        <div class="box">I am a box</div>
+        <div class="box2">I am the new box</div>
+
+
+
+    </main>
+    <ul>
+        <li class="fruits">apple</li>
+        <li class="fruits">banana</li>
+        <li class="fruits">orange</li>
+    </ul>
+
+</body>
+
+</html>

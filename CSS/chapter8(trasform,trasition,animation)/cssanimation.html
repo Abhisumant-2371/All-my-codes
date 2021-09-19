@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        hr{
+            color:red;
+            border: 1.5px solid red;
+            width: 0vw;
+            margin-left: 0px;
+            animation-name: loading;
+            animation-duration: 0.5s;
+            animation-timing-function: ease;
+            animation-iteration-count: 10;
+        }
+        @keyframes loading {
+            from{
+                width: 0px;
+                margin-left: 0px;
+
+            }
+            to{
+                width: 100vw;
+                margin-left: 600px;
+            }
+        }
+        .container{
+            margin-top: 10px;
+            background-color: aqua;
+            height: 50vh;
+        }
+        .box{
+            border: 2px solid black;
+            width: 300px;
+            height: 300px;
+            color: white;
+            background-color: red;
+            animation-name: newanimation;
+            animation-duration: 2s;
+            animation-delay: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 2;
+            animation-direction:alternate-reverse;
+        }
+        @keyframes newanimation{
+            from{
+                width:300px;
+            }
+            to{
+                width: 500px;
+            }
+        }
+        /* ------------------------------- */
+        /*
+        All animation properties */
+        /* 
+        1.Animation name
+        2.Animation duration
+        3.animation timing function
+        4.animation delay
+        5.animation iteration count
+        6.animation direction 
+        */
+        /* shorthand property for animation */
+        
+        /* -------------------------------- */
+    </style>
+</head>
+<body>
+    <hr>
+    <div class="container">
+        <div class="box">This is me </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <STYle>
+        .container {
+            display: grid;
+            grid-template-columns: auto;
+            row-gap: 20px;
+            grid-auto-rows: minmax(10vh, auto);
+        }
+
+        .box {
+
+            border: 2px solid red;
+            background-color: lightgreen;
+            /* height: 20vh; */
+        }
+
+        /* -------------------------- */
+        @media only screen and (min-width:768px) {
+            .container {
+                display: grid;
+                grid-template-columns: repeat(auto-fill,minmax(20vw,auto));
+                gap: 20px 20px;
+                grid-auto-rows: minmax(10vh, auto);
+            }
+
+            .box {
+
+                border: 2px solid red;
+                background-color: lightgreen;
+                /* height: 20vh; */
+            }
+        }
+        @media only screen and (min-width:1268px) {
+            .container {
+                display: grid;
+                grid-template-columns: auto auto;
+                gap: 20px 20px;
+                grid-auto-rows: minmax(10vh, auto);
+            }
+
+            .box {
+
+                border: 2px solid red;
+                background-color: lightgreen;
+                
+            }
+            .hh{
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+        }
+    </STYle>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box hh">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni non architecto veritatis atque
+            a, debitis harum distinctio doloremque amet animi deleniti la nostrum temporibus </div>
+        <div class="box ">BOX 2</div>
+        <div class="box">BOX 3</div>
+        <div class="box">BOX 4</div>
+        <div class="box">BOX 5</div>
+    </div>
+</body>
+
+</html>
+
+<!-- 
+display: grid;
+
+// no. of column property
+
+grid-template-columns: 200px 200px 200px;
+//also we can do it by using 
+
+grid-template-column:1fr 1fr 1fr;
+//for getting rid of writting multiple times we can 
+write
+
+grid-template-column:repeat(3,1fr) 2fr;
+grid-template-column:repeat(auto-fill,minmax(200px,1fr);
+ -->
+
+
+
+
+<!-- //gap between the grid
+
+grid-gap:20px;
+// its a shorthand for the gap
+grid-column-gap;
+grid-row-gap;
+
+// for fixing the size of the grid row or column
+
+grid-auto-rows: 100px;|,
+// auto row for fixing the size of the row is not 
+declared then automatically takes the slze of the 
+container
+grid-auto-columns: 50px;
+//gives the width of the column for a grid
+
+grid-auto-column-minmax(100px,auto)
+//min width of the column is 100px
+
+ -->

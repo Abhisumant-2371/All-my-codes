@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 200vw;
+}
+/* .container{
+    display: flex;
+    background-color: yellow;
+    justify-content: center;
+    align-items: center;
+    margin: 10vh ;
+    height: 30vh;
+    align-content: space-around;
+    flex-wrap: wrap;
+    overflow: hidden;
+    
+     
+} */
+.main{
+ width: 55vw;
+ height: 41vh;
+ position: absolute;
+ /* margin: 10vh 0 0 20vw;
+ */
+    left: 15vw;
+ top: 43px;
+ background-color: blue;
+ z-index: 4;
+}
+.container
+{
+    margin: 4vw 0 0 15vw;
+}
+.small{
+    display: inline-block;
+    position: relative;
+    height: 10vh;
+    width: 10vw;
+    z-index: 10;
+    background-color: red;
+    margin: 4vw;
+    animation:sliding 9s normal 1s normal infinite
+
+    
+}
+@keyframes sliding{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(-550px);
+    }
+}

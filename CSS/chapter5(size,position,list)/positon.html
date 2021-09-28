@@ -77,20 +77,19 @@ following are the possible values:=
 1.static : The default position :top/bottom/left/right/z-index has no effect .It just 
 put the element into its normal position in the document flow
 
-2.relative: The top /bottom /left/right/z-index will now work.Otherwise the element is in the flow of document like static.
+2.relative: the element is not going to lose it's normal position and and by using the top/bottom/left right /z-index property we can change its alingment
 
-3.absolute: The element is removed from the flow & is relatively positioned to its first non-static ancestor top /bottom etc works
-basically for all the other element respect it will be such that it not exist and its position will be distributed among all
+3.absolute: the element position get changed according to the position of its first parent
 
-5.fixed:Just like absolute except the elemtent is positioned relative to the browser window.
+4.fixed:Just like absolute except the elemtent is positioned relative to the browser window.
 means that if we scroll the window it will not gonna effect it will remain in its own position
 
-6.sticky:The element is positioned based on the user scroll position -->
+5.sticky:The element will take its place and will be fixed at the position when you scroll  -->
 
 <!-- TOP BOTTOM LEFT RIGHT  -->
+<!-- ARE THE PROPERTIES WHICH MOVE THE BLOCK OF AN ELEMENT IN THE PARTICULAR DIRECTION -->
 <!-- z-index will make sure that which element will be above the other -->
 <!-- More z index will be the priority -->
-<!-- ARE THE PROPERTIES WHICH MOVE THE BLOCK OF AN ELEMENT IN THE PARTICULAR DIRECTION -->
 
 <body>
     <header>

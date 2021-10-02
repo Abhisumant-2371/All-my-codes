@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn {
+            color: red;
+            background-color: yellow;
+            border-radius: 8px;
+        }
+
+        p {
+            position: relative;
+            /* border: 1px solid; */
+            border-left:2px solid lightblue;
+            border-bottom:2px solid lightcoral;
+            padding: 10px;
+            /* box-shadow: 5px 10px #888888; */
+            animation:upward 6s normal 1s infinite none;
+        }
+        @keyframes upward{
+            0%{
+                box-shadow: 0px 0px red;
+            }
+            45%{
+
+                /* top: -10px;
+                left:10px; */
+                box-shadow: -5px 10px #888888;
+
+            }
+            55%{
+                /* top:-10px;
+                left:10px; */
+                box-shadow: -5px 10px #928f8f;
+            }
+            100%{
+                
+                /* top: 0px;
+                left:0px; */
+                box-shadow: 0px 0px red;
+            }
+
+        }
+        img{
+            display: block;
+            width: 10vw;
+            margin: auto;
+            clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>this is my para</h1>
+    <p id="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi ex laboriosam quaerat dolores,
+        aliquid fugit et quo consectetur placeat hic reprehenderit eaque nam?</p>
+    <span>
+        The time is <span id="time"></span>
+    </span>
+    <button id="btn" onclick="togglehide()">SHOW/HIDE</button>
+    <img src="aks.jpg" alt="akshay kumar">
+</body>
+<script src="arrays_and_object.js"></script>
+
+</html>

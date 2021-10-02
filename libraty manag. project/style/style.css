@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.logo{
+    position:relative;
+    width: 58px;
+    margin: 3px;
+    clip-path: circle(50% at 50% 50%);
+}
+.navbar{
+    background-color: #d300ff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-ul{
+    display: flex;
+    justify-self:flex-end;
+    
+}
+.navlinks{
+    list-style: none;
+    margin:0 7px;
+}
+.navlinks a{
+    color: white;
+    padding:2px;
+    border:2px solid red;
+    border-radius: 5px;
+    text-decoration: none;
+
+}
+.navlinks a:hover{
+    background-color: red;
+}
+
+
+/* ----------------------------new nav bar style------------- */
+.navbar-2{
+    display: none;
+    background-color:#d300ff;
+    font-size: 10px;
+    position:absolute;
+    width: 100%;
+    transition: 1s;
+
+}
+.navbar-2 ul{
+    margin:2px 0;
+}
+
+.navlinks2{
+    
+    padding:2px 0px;
+}
+.navlinks2 a{
+    color: white;
+    border:2px solid red;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.navlinks2 a:hover{
+    background-color: red;
+}
+/* -----------------icons for showing and hiding menu--- */
+#showmenu{
+    display: none;
+}
+
+#hidemenu{
+    display: none;
+}
+/* ------------------mobile or small device navbar------------ */
+
+
+@media only screen and (max-width:768px){
+    *{
+
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:'Poppins', sans-serif;
+        font-size: 10px;
+    }
+    #showmenu{
+        display: block;
+        margin: 0 8px;
+        padding: 2px;
+        border: 1px solid black;
+        border-radius: 5px;
+
+    }
+    .showclass{
+        display: block;
+
+    }
+    .hideclass{
+        display: none;
+    }
+    #hidemenu{
+        display:block;
+        align-self: flex-end;
+        margin-top: 3px;
+        margin-right: 4px;
+        
+    }
+    .nav-ul{
+        display: none;
+    }
+    /* -------------new nav query--------------- */
+    .navbar-2{
+        display: flex;
+        flex-direction: column;
+        background-color:#d300ff;
+        font-size: 10px;
+        position:absolute;
+        width: 100%;
+        top: -82px;
+    }
+    .navbar-2 ul{
+        margin:2px 0;
+    }
+    
+    .navlinks2{
+        
+        padding:2px 0px;
+    }
+    .navlinks2 a{
+        color: white;
+        border:2px solid red;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+    .navlinks2 a:hover{
+        background-color: red;
+    }
+
+}

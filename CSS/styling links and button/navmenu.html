@@ -7,17 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
-            width: 100vw;
-            overflow: hidden;
+        *{
+            margin: 0;
+            padding: 0;
+            text-emphasis: none;
+            box-sizing: border-box;
+
         }
 
         .navbar {
             background-color: rgb(100, 240, 221);
-            height: 10vh;
+            height: 10%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+        }
+        .mobile-navbar {
+            background-color: rgb(100, 240, 221);
+            display: block;
+            
+
+        }
+        .mobile-ulnav{
+            display: block;
+            text-align: center;
+            font-size: 1rem;
 
         }
 
@@ -31,7 +46,7 @@
 
         .navbar li {
             list-style: none;
-            padding: 10px;
+            padding: 0px 10px;
             font-weight: bold;
         }
 
@@ -41,7 +56,7 @@
 
         @media only screen and (max-width:700px) {
             .navbar {
-                /* display: flex; */
+                display: flex;
                 background-color: rgb(100, 240, 221);
 
             }
@@ -56,97 +71,7 @@
             }
         }
 
-        .container {
-            background-color: yellow;
-            margin-top: 20px;
-            width: 30vw;
-            margin-left: auto;
-            margin-right: auto;
-            /* height: 20vh; */
 
-        }
-
-        .sub {
-            background-color: teal;
-            margin: auto;
-
-
-
-        }
-
-        p {
-            margin-top: 10px;
-            text-align: center;
-            border: 3px solid black;
-        }
-
-        .edu {
-            margin-left: 10vw;
-        }
-
-        .bookslide {
-            background-color: red;
-            display: flex;
-            position: relative;
-            /* z-index: -1; */
-            /* margin-left: 10vw; */
-            height: 40vh;
-            width: 150vw;
-            align-items: center;
-            justify-content: space-evenly;
-        }
-
-        .book {
-            position: relative;
-            width: 5vw;
-            height: 20vh;
-            background-color: blueviolet;
-            border: 2px solid black;
-            box-sizing: border-box;
-            text-align: center;
-            z-index: 3;
-            animation: slide 5s ease-in-out 1s infinite normal;
-            /* transform: translateX(-1000px); */
-
-        }
-
-        .background {
-            position: absolute;
-            height: 40vh;
-            background-color: yellow;
-            width: 80vw;
-            z-index: 2;
-            /* margin-left: 10vw; */
-        }
-
-        .fault {
-            background-color: rgb(253, 253, 253);
-            height: 40vh;
-            width: 965px;
-            left: 90vw;
-            position: absolute;
-            z-index: 4;
-        }
-
-        #saviour {
-            position:absolute;
-            background-color: white;
-            height: 40vh;
-            top: 145px;
-            width: 145px;
-            left: 0;
-            z-index: 5;
-        }
-
-        @keyframes slide {
-            from {
-                transform: translateX(0px);
-            }
-
-            to {
-                transform: translateX(-1000px);
-            }
-        }
     </style>
 </head>
 
@@ -154,7 +79,7 @@
     <header>
         <nav class="navbar">
             <h3>iCoder</h3>
-            <ul>
+            <ul id="nav-ul" class="navul">
                 <li>home</li>
                 <li>about</li>
                 <li>contact us</li>
@@ -164,31 +89,16 @@
             <button id="menu">menu</button>
         </nav>
     </header>
-    <main>
-        <div class="container">
-            <div class="sub">
-                <p>
-
-                    lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit nam id possimus! Ipsum modi ratione
-                    minus
-                    neque? Ipsam nostrum quasi rerum qui unde
-                </p>
-            </div>
-        </div>
-        <div class="edu">
-            <div class="fault"></div>
-            <div class="background"></div>
-            <div class="bookslide">
-                <div class="book b1">book1</div>
-                <div class="book b2">book2</div>
-                <div class="book b3">book3</div>
-                <div class="book b4">book4</div>
-                <div class="book b5">book5</div>
-                <div class="book b6">book6</div>
-            </div>
-        </div>
-        <div id="saviour"></div>
-    </main>
+    <script>
+        document.getElementById('menu').addEventListener("click",function(e){
+           document.getElementById('menu').style.display="none";
+           document.querySelector('nav').classList.remove("navbar");
+           document.querySelector('nav').classList.add("mobile-navbar");
+           document.getElementById('nav-ul').style.display="block";
+           document.getElementById('nav-ul').style.textAlign="start";
+        //    document.getElementById('nav-ul').classList.add("mobile-ulnav");
+        });
+    </script>
 </body>
 
 </html>

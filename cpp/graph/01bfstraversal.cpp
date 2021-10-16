@@ -42,6 +42,7 @@ class Graph
             }
         }
     }
+    // distance of source node is 0 and distance of other node is int max so as soon as we will be discovering the node we will keep on updating the node distance 
     void shortest_path_using_bfs(int src)
     {
         queue <int > q;

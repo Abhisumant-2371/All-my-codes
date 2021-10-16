@@ -16,6 +16,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    z-index: 101;
 }
 .nav-ul{
     display: flex;
@@ -47,7 +49,7 @@
     position:absolute;
     width: 100%;
     transition: 1s;
-
+    z-index: 100;
 }
 .navbar-2 ul{
     margin:2px 0;
@@ -76,7 +78,68 @@
 }
 /* ------------------mobile or small device navbar------------ */
 
+/* ----grid style for popular and latest books etc--------- */
+.gridforCategoryBooks{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "category latest latest latest latest"
+        "category popular popular popular popular";
+    
+}
+.category{
+    grid-area: category;
+    background-color: lightgreen;
+   
+}
 
+.latestbooks{
+    grid-area: latest;
+    background-color: lightcoral;
+}
+.popularbooks{
+    grid-area: popular;
+    background-color: lightcoral;
+}
+
+.latestbooks{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+
+
+}
+.latestbookheading{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    background-color: yellow;
+}
+.booklatest{
+    background-color: lightblue;
+    height: 150px;
+    width: 130px;
+    margin: auto;
+}
+.popularbooks{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+
+}
+.popularbookheading{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    background-color: yellow;
+}
+.bookpopular{
+    background-color: lightblue;
+    height: 150px;
+    width: 130px;
+    margin: auto;
+}
+.booklatest img{
+    height: 100%;
+    width: 100%;
+}
 @media only screen and (max-width:768px){
     *{
 
@@ -119,7 +182,7 @@
         font-size: 10px;
         position:absolute;
         width: 100%;
-        top: -82px;
+        top: -132px;
     }
     .navbar-2 ul{
         margin:2px 0;
@@ -138,5 +201,50 @@
     .navlinks2 a:hover{
         background-color: red;
     }
+    /* ------------------media query for books and category----------- */
+    .latestbooks{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 3px;
+    
+    }
+    .latestbookheading{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        background-color: yellow;
+    }
+    .booklatest{
+        background-color: lightblue;
+        height: 130px;
+        width: 100px;
+        margin: auto;
 
+    }
+    .popularbooks{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 3px;
+        justify-content: space-around;
+        align-items: center;
+    
+    }
+    .popularbookheading{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        background-color: yellow;
+    }
+    .bookpopular{
+        background-color: lightblue;
+        height: 130px;
+        width: 100px;
+        margin: auto;
+    }
+    .booklatest img{
+        height: 100%;
+        width: 100%;
+    }
+    .bookpopular img{
+        height: 100%;
+        width: 100%;
+    }
 }
